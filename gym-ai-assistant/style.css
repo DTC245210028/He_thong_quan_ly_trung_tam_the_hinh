@@ -1,0 +1,109 @@
+/* SmartGym AI Custom Stylesheet */
+:root {
+  --gym-bg: #0c0f17;
+  --gym-card: #151a28;
+  --gym-card-border: #232c40;
+  --gym-accent: #10b981;
+}
+
+body {
+  background-color: var(--gym-bg);
+  color: #f1f5f9;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Nav Tab Active States */
+.nav-tab {
+  color: #94a3b8;
+  border: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+.nav-tab:hover {
+  color: #f8fafc;
+  background-color: rgba(30, 41, 59, 0.7);
+}
+.nav-tab.active {
+  color: #ffffff;
+  background-color: #1e293b;
+  border-color: rgba(16, 185, 129, 0.4);
+  box-shadow: 0 4px 12px -2px rgba(16, 185, 129, 0.15);
+}
+
+/* Quick chips */
+.quick-chip {
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid #334155;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 11px;
+  color: #cbd5e1;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+.quick-chip:hover {
+  border-color: #10b981;
+  color: #ffffff;
+  background: rgba(16, 185, 129, 0.1);
+}
+
+/* Day Schedule Card Styles */
+.day-card {
+  background: #151a28;
+  border: 1px solid #232c40;
+  border-radius: 14px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.day-card:hover {
+  border-color: #334155;
+  transform: translateY(-1px);
+}
+.day-card.rest-day {
+  background: rgba(15, 23, 42, 0.6);
+  border-style: dashed;
+}
+
+/* Exercise item */
+.exercise-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  background: rgba(15, 23, 42, 0.7);
+  border-radius: 8px;
+  border: 1px solid rgba(51, 65, 85, 0.4);
+}
+
+/* Micro-animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tab-content:not(.hidden) {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Glass effect */
+.glass-panel {
+  background: rgba(21, 26, 40, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
